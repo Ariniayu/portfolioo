@@ -1,0 +1,20 @@
+{
+    "routes" : [
+        {
+            "src":"/",
+            "dest":"/"
+        },
+        {
+            "src":"/video",
+            "dest":"/"
+        },
+        {
+            "src":"/desain",
+            "dest":"/"
+        },
+        {
+            "src":"/ui",
+            "dest":"/"
+        }
+    ]
+}

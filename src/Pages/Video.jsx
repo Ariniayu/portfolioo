@@ -145,14 +145,14 @@ const VideoPortfolioPage = () => {
       id: 1,
       title: "Tren Promosi MI 1",
       category: "Tools: Capcut ",
-      videoUrl: iyaiya,
+      videoUrl: "https://youtube.com/shorts/iJJ3GxmbXEk?si=fkTVltNscW9YC_w_",
       thumbnail: iya2
     },
     {
       id: 2,
       title: "Trend Promosi MI 2",
       category: "Tools:  Capcut",
-      videoUrl: rudi,
+      videoUrl: "https://youtube.com/shorts/gmClCT3iNIQ?si=7edOGM_rmL8GXNsd",
       thumbnail: rudi2
     },
     {
