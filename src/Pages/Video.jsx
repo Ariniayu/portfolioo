@@ -4,23 +4,23 @@ import VideoReel from '../components/VideoReel';
 // import rekapkkl from '../assets/videos/rekap kkl 2025.mp4'
 // import bumper from '../assets/videos/bumper (2).mp4'
 // import afterevent from '../assets/videos/After event.mp4';
-import iyaiya from '../assets/videos/iyaiya.mp4';
+// import iyaiya from '../assets/videos/iyaiya.mp4';
 // import vsga from '../assets/videos/dokumentasi video.mp4';
 // import pesan from '../assets/videos/kesan dan pesan.mp4'
-import palan from '../assets/videos/palan.mp4';
-import rudi from '../assets/videos/rudi.mp4';
+// import palan from '../assets/videos/palan.mp4';
+// import rudi from '../assets/videos/rudi.mp4';
 import bmegallery from '../assets/bumper/bmegallery.png';
-import kkl from '../assets/bumper/kkl.png';
-import semnas from '../assets/bumper/bumper.png'
+// import kkl from '../assets/bumper/kkl.png';
+// import semnas from '../assets/bumper/bumper.png'
 import sinem from '../assets/bumper/maliocin.png'
 import sono from '../assets/bumper/sono.png';
 import pm from '../assets/bumper/kopipm.png'
 import vlogweb from '../assets/bumper/vlog.png';
-import rudi2 from '../assets/bumper/rudi2.png';
+// import rudi2 from '../assets/bumper/rudi2.png';
 import afterevent2 from '../assets/bumper/afterevent.png';
-import kacamata from '../assets/bumper/kacamata.png';
+// import kacamata from '../assets/bumper/kacamata.png';
 import demiapa from '../assets/bumper/demiapa.png';
-import iya2 from '../assets/bumper/iyaiya2.png';
+// import iya2 from '../assets/bumper/iyaiya2.png';
 import vsga2 from '../assets/bumper/vsga.png';
 import canva from '../assets/canva.png';
 import ae from '../assets/ae.svg';
@@ -143,24 +143,24 @@ const VideoPortfolioPage = () => {
   const videoPotrait = [
     {
       id: 1,
-      title: "Tren Promosi MI 1",
+      title: "Kesan dan Pesan VSGA 2024",
       category: "Tools: Capcut ",
       videoUrl: "https://youtube.com/shorts/iJJ3GxmbXEk?si=fkTVltNscW9YC_w_",
-      thumbnail: iya2
+      thumbnail: vsga2
     },
     {
       id: 2,
-      title: "Trend Promosi MI 2",
+      title: "After Event VSGA 2024",
       category: "Tools:  Capcut",
-      videoUrl: "https://youtube.com/shorts/gmClCT3iNIQ?si=7edOGM_rmL8GXNsd",
-      thumbnail: rudi2
+      videoUrl: "https://youtube.com/shorts/0rh5A4bAsS4?si=o4NtVV_j_DKBmcAU",
+      thumbnail: demiapa
     },
     {
       id: 3,
-      title: "Tren Promosi MI 3",
+      title: "After Event Hackthon 2024",
       category: "Tools:  Capcut ",
-      videoUrl:  palan,
-      thumbnail: kacamata
+      videoUrl:  "https://youtube.com/shorts/HgHAq1p3UT0?si=UFciHG5EEIREBSDZ",
+      thumbnail: afterevent2
     },
     // {
     //   id: 4,
