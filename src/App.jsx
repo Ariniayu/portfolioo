@@ -2,7 +2,6 @@ import './App.css';
 import { Toaster } from 'react-hot-toast';
 import { BrowserRouter as Router, Routes, Route, useLocation } from "react-router-dom";
 import { useEffect, useState } from "react";
-import Header from './components/header';
 import About from './components/About';
 import Porto from './components/Porto';
 import Email from './components/Email';
@@ -40,7 +39,7 @@ function Wrapper() {
           path="/"
           element={
             <>
-              {/* <Header /> */}
+             
               <About />
               <Porto />
               <Email />
