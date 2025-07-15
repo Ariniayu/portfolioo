@@ -52,6 +52,9 @@ import ps from '../assets/ps.png'
 import canva from '../assets/canva.png'
 import ilustrator from '../assets/illustrator.png'
 import figma from '../assets/figma.svg'
+import trvl1 from '../assets/dg/trvl1.png'
+import trvl2 from '../assets/dg/trvl2.png'
+import trvl3 from '../assets/dg/trvl3.png'
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
 import "swiper/css";
@@ -271,8 +274,32 @@ export default function Desain() {
                 </h3>
               </div>
             </motion.div>
-          ))}
+          ))} 
         </div>
+
+        <div className="flex flex-col sm:flex-row gap-4 md:gap-6 mt-16 mb-8 md:mb-16">
+  {[trvl2, trvl3].map((poster, index) => (
+    <motion.div 
+      key={index}
+      className="relative overflow-hidden rounded-lg shadow-2xl"
+      style={{ width: '320px', height: '400px' }} // Set fixed width and height
+      whileHover={{ y: -10 }}
+      transition={{ duration: 0.3, delay: index * 0.1 }}
+    >
+      <img 
+        src={poster} 
+        alt={`Poster ${index + 1}`} 
+        className="w-full h-full object-cover" 
+      />
+      <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-end p-2">
+        <h3 className="text-xs font-medium">
+          {index === 0 ? "Advertising Poster" : index === 1 ? "Advertising Poster" : "Advertising Poster"}
+        </h3>
+      </div>
+    </motion.div>
+  ))}
+</div>
+        
       </section>
       </ScrollAnimation>
 
