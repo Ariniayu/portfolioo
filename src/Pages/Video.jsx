@@ -51,6 +51,7 @@ import ParticleBg from '../components/ParticleBg';
 import { FiArrowRight } from 'react-icons/fi';
 import { useState, useEffect } from 'react';
 import { FaArrowUp } from 'react-icons/fa';
+ import adamokap from '../assets/ui/adamokap.png';
 
 const VideoPortfolioPage = () => {
   // State untuk tombol scroll-to-top
@@ -135,6 +136,13 @@ const VideoPortfolioPage = () => {
       category: "Tools: Adobe Premiere",
       videoUrl: "https://youtu.be/jrqcDkwoRLU?si=7swdn7__OuSAo1IP",
       thumbnail: vlogweb
+    },
+    {
+      id: 7,
+      title: "Video Aplikasi Adajasa",
+      category: "Tools: Canva, Capcut , Voiceover AI",
+      videoUrl: "https://youtu.be/5_edwcJBGbU?si=dq2BAXY2NrI-KgxV",
+      thumbnail: adamokap
     },
     
   
