@@ -2,6 +2,7 @@ import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { useState, useEffect } from 'react';
 import { FaArrowUp } from 'react-icons/fa';
+import { FiChevronLeft, FiChevronRight } from 'react-icons/fi';
 import Poster1 from '../assets/dg/Poster1.png';
 import Poster2 from '../assets/dg/Poster2.png';
 import Poster3 from '../assets/dg/Poster3.png';
@@ -24,6 +25,15 @@ import an5 from "../assets/dg/an5.png";
 import an6 from "../assets/dg/an6.png";
 import an7 from "../assets/dg/an7.png";
 import suga from "../assets/dg/suga.png";
+import gm1 from "../assets/dg/gm1.png"
+import gm2 from "../assets/dg/gm2.png"
+import gm3 from "../assets/dg/gm3.png"
+import gm4 from "../assets/dg/gm4.png"
+import gm5 from "../assets/dg/gm5.png"
+import gm6 from "../assets/dg/gm6.png"
+import gm7 from "../assets/dg/gm7.png"
+import gm8 from "../assets/dg/gm8.png"
+import gm9 from "../assets/dg/gm9.png"
 import blessingg from "../assets/logo/blessingg.png"
 import adajasa from "../assets/logo/adajasa.png"
 import checkup from "../assets/logo/checkup.png"
@@ -650,6 +660,9 @@ export default function Desain() {
         </div>
       </section>
       </ScrollAnimation>
+
+     
+
 
       {/* Tombol scroll-to-top */}
             {isVisible && (

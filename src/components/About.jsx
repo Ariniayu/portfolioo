@@ -210,7 +210,7 @@ export default function About() {
                             viewport={{ once: true }}
                             transition={{ delay: 0.4 }}
                         >
-                            Hello! I am Arin, Fresh Graduate with a high passion for exploring and creating in the creative world.
+                            Hello! I am Arin, with a high passion for exploring and creating in the creative world.
                             From attractive graphic design, inspiring video creation, UI/UX design that makes things easier for people, to web development —
                             I enjoy every moment on the creative path.
                         </motion.p>

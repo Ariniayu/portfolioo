@@ -5,9 +5,11 @@ import { useEffect, useState } from "react";
 import About from './components/About';
 import Porto from './components/Porto';
 import Email from './components/Email';
-import Desain from './Pages/Desain'; // <--- halaman tujuan
+import Desain from './Pages/Desain';
 import VideoPortfolioPage from './Pages/Video';
 import UIUX from './Pages/Ui';
+import ProjectDetail from './Pages/ProjectDetail';
+
 // Komponen pembungkus supaya bisa akses location
 function Wrapper() {
   const location = useLocation();
@@ -49,6 +51,7 @@ function Wrapper() {
         <Route path="/desain" element={<Desain />} />
         <Route path="/video" element={<VideoPortfolioPage />} />
         <Route path="/ui" element={<UIUX />} />
+        <Route path="/ui/projects/:id" element={<ProjectDetail />} />
       </Routes>
     </div>
   );

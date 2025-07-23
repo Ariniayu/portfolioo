@@ -1,9 +1,10 @@
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 
 const ProjectCard = ({ project, isHovered }) => {
   return (
     <motion.div
-      className="relative overflow-hidden rounded-xl shadow-lg bg-white"
+      className="relative overflow-hidden rounded-xl shadow-lg bg-black bg-opacity-60"
       whileHover={{ scale: 1.03 }}
       transition={{ type: 'spring', stiffness: 400, damping: 20 }}
     >
@@ -15,13 +16,16 @@ const ProjectCard = ({ project, isHovered }) => {
         />
         {isHovered && (
           <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center"
-          >
-            <button className="px-6 py-2 bg-white text-purple-700 font-semibold rounded-full">
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              className="absolute inset-0 bg-black bg-opacity-60 flex items-center justify-center"
+            >
+           <Link
+              to={`/ui/projects/${project.id}`} // Sesuaikan path dengan route
+              className="px-6 py-2 bg-white text-purple-700 font-semibold rounded-full"
+            >
               View Project
-            </button>
+            </Link>
           </motion.div>
         )}
       </div>
@@ -30,7 +34,7 @@ const ProjectCard = ({ project, isHovered }) => {
         <p className="text-gray-600 mb-4">{project.description}</p>
         <div className="flex flex-wrap gap-2">
           {project.tags.map(tag => (
-            <span key={tag} className="px-3 py-1 bg-gray-100 text-gray-800 text-sm rounded-full">
+            <span key={tag} className="px-3 py-1 border-1 border-gray-500 bg-gray-800 text-gray-100 text-sm rounded-full">
               {tag}
             </span>
           ))}

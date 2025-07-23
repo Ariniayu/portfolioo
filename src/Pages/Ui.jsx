@@ -3,9 +3,7 @@ import { motion, useScroll, useTransform, AnimatePresence } from 'framer-motion'
 import ProjectCard from '../components/ProjectCard';
 import SkillBar from '../components/SkillBar';
 import InteractiveGallery from '../components/InteractiveGallery';
-import adamokap from '../assets/ui/adamokap.png';
-import wonderful from '../assets/ui/wonderful.png';
-import pos from '../assets/ui/pos.png'
+import projects from '../data/project.jsx';
 
 const UIUX = () => {
   const [activeFilter, setActiveFilter] = useState('all');
@@ -20,35 +18,7 @@ const UIUX = () => {
   const yBg = useTransform(scrollYProgress, [0, 1], ['0%', '50%']);
   const opacity = useTransform(scrollYProgress, [0, 0.5], [1, 0.2]);
 
-  const projects = [
-    {
-      id: 1,
-      title: "Aplikasi Fintech Mobile",
-      category: "mobile",
-      description: "Redesign UX untuk aplikasi perbankan digital",
-      tags: ["Figma", "User Research", "Prototyping"],
-      image: adamokap,
-      link: "/projects/fintech"
-    },
-    {
-      id: 2,
-      title: "Dashboard Analytics",
-      category: "web",
-      description: "Sistem dashboard dengan data visualization",
-      tags: ["Sketch", "UI Design", "Design System"],
-      image:wonderful,
-      link: "/projects/dashboard"
-    },
-    {
-      id: 3,
-      title: "AR Shopping Experience",
-      category: "other",
-      description: "Augmented reality for e-commerce",
-      tags: ["Unity", "3D Modeling", "UX Flow"],
-      image: pos,
-      link: "/projects/ar-shopping"
-    },
-  ];
+ 
 
   const filteredProjects = activeFilter === 'all' 
     ? projects 
@@ -106,8 +76,8 @@ const UIUX = () => {
             animate={{ y: 0, opacity: 1 }}
             transition={{ delay: 0.2 }}
           >
-            UI/UX <span className="text-white">Design</span> & WEB <span className="text-white">Dev</span> <br />
-            <span className="text-white">Portfolio</span> on PROCESS
+            UI/UX <span className="text-white">Design</span> <span className='text-yellow-400'>&</span> WEBSITE <span className="text-white">Portfolio on Progres</span> <br />
+            
           </motion.h1>
           <motion.p
             className="text-xl md:text-2xl opacity-90 max-w-2xl mx-auto"
@@ -116,9 +86,58 @@ const UIUX = () => {
             transition={{ delay: 0.4 }}
           >
           </motion.p>
-         
         </div>
       </motion.section>
+
+      {/* Projects Filter with Futuristic Style */}
+      <motion.div className="flex justify-center gap-4 py-12 px-4 ">
+        
+        {['all','uiux', 'Website'].map((filter) => (
+          <motion.button
+            key={filter}
+            onClick={() => setActiveFilter(filter)}
+            className={`px-6 py-2 rounded-full font-medium transition-all duration-300 border ${
+              activeFilter === filter 
+                ? 'bg-cyan-500/10 border-cyan-400 text-cyan-400 shadow-lg shadow-cyan-500/20' 
+                : 'bg-gray-800 border-gray-700 text-gray-300 hover:bg-gray-700 hover:border-gray-600'
+            }`}
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+          >
+            {filter.charAt(0).toUpperCase() + filter.slice(1)}
+          </motion.button>
+        ))}
+      </motion.div>
+
+      {/* Projects Grid with Hover Effects */}
+      <motion.div 
+        className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 px-4 md:px-10% py-12 bg-gray-900"
+        layout
+      >
+        <AnimatePresence>
+          {filteredProjects.map((project) => (
+            <motion.div
+              key={project.id}
+              layout
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1, scale: 1 }}
+              exit={{ opacity: 0, scale: 0.9 }}
+              transition={{ duration: 0.3 }}
+              onHoverStart={() => setHoveredProject(project.id)}
+              onHoverEnd={() => setHoveredProject(null)}
+              className="w-full group"
+            >
+              <ProjectCard 
+                project={project} 
+                isHovered={hoveredProject === project.id}
+                darkMode
+              />
+            </motion.div>
+          ))}
+        </AnimatePresence>
+      </motion.div>
+      
+      
 
 
     </motion.div>
