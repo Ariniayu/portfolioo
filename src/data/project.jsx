@@ -309,7 +309,7 @@
   id: 6,
   title: "Rancangan UI Design Website Real Estate",
   category: "uiux",
-  description: "Website Real Estate Jual Beli Sewa Rumah",
+  description: "Website Real Estate Jual Beli Sewa Rumah NB: Gunakan ukuran desktop 90% untuk hasil yang lebih bagus",
   tags: ["Figma"],
   image: uireal,
   link: "https://www.figma.com/proto/XK6NdbC9X2DNTQdFEz1zdM/Untitled?node-id=14-3488&t=GWOFqPHwA48Wr8Wc-0&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1",

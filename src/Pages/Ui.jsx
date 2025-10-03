@@ -74,7 +74,7 @@ const UIUX = () => {
             animate={{ y: 0, opacity: 1 }}
             transition={{ delay: 0.2 }}
           >
-            UI/UX <span className="text-white">Design</span> <span className='text-yellow-400'>&</span> WEBSITE <span className="text-white">Portfolio</span> <br />
+            UI/UX <span className="text-white">Design</span> <span className='text-yellow-400'>&</span> WEBSITE <span className="text-white">Portfolio</span> <br /><span className='text-white text-[25px]'>untuk pengalaman lebih bagus gunakan Laptop/PC</span>
           </motion.h1>
           <motion.p
             className="text-xl md:text-2xl opacity-90 max-w-2xl mx-auto"
