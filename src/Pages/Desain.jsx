@@ -2,6 +2,7 @@ import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { useState, useEffect } from 'react';
 import { FaArrowUp } from 'react-icons/fa';
+import { FaHome } from 'react-icons/fa';
 import { FiChevronLeft, FiChevronRight } from 'react-icons/fi';
 import Poster1 from '../assets/dg/Poster1.png';
 import Poster2 from '../assets/dg/Poster2.png';
@@ -65,9 +66,47 @@ import figma from '../assets/figma.svg'
 import trvl1 from '../assets/dg/trvl1.png'
 import trvl2 from '../assets/dg/trvl2.png'
 import trvl3 from '../assets/dg/trvl3.png'
+import fly1 from '../assets/dg/Depan.png'
+import fly2 from '../assets/dg/belakang.png'
+import mcf1 from '../assets/dg/mcfl1.png'
+import mcf2 from '../assets/dg/mcfl2.png'
+import mcf3 from '../assets/dg/mcfl3.png'
+import mcf4 from '../assets/dg/mcfl4.png'
+import mcf5 from '../assets/dg/mcfl5.png'
+import pmflt1 from '../assets/dg/pmflt.png'
+import mcpf1 from '../assets/dg/mcpm1.png'
+import mcpf2 from '../assets/dg/mcpm2.png'
+import mcpf3 from '../assets/dg/mcpm3.png'
+import real1 from '../assets/dg/igo1.png'
+import real2 from '../assets/dg/igo2.svg'
+import real3 from '../assets/dg/igo3.svg'
+import real4 from '../assets/dg/igo4.svg'
+import real5 from '../assets/dg/igo5.svg'
+import real6 from '../assets/dg/igo6.svg'
+import real7 from '../assets/dg/igo7.svg'
+import real8 from '../assets/dg/igo8.svg'
+import real9 from '../assets/dg/igo9.svg'
+import bal1 from '../assets/dg/bl1.png'
+import bal2 from '../assets/dg/bl2.png'
+import bal3 from '../assets/dg/bl3.png'
+import bal4 from '../assets/dg/bl4.png'
+import bal5 from '../assets/dg/bl5.png'
+import bal6 from '../assets/dg/bl6.png'
+import katalog from '../assets/dg/katalogh.png'
+import kat1 from '../assets/dg/vr.jpg'
+import kat2 from '../assets/dg/vr1.jpg'
+import kat3 from '../assets/dg/vr2.jpg'
+import kat4 from '../assets/dg/vr3.jpg'
+import indo from '../assets/dg/indo.png'
+import indo2 from '../assets/dg/indo2.png'
+import indo3 from '../assets/dg/indo3.png'
+import indo4 from '../assets/dg/indo4.png'
+import takut from '../assets/dg/takut.png'
+import takut2 from '../assets/dg/takut2.png'
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
 import "swiper/css";
+import { IoMoon } from "react-icons/io5";
 
 const logos = [blessingg, harmoni, pullstacklogo, checkup, gws, moneytrack, datigart, adajasa, izah, skj]
 
@@ -244,6 +283,72 @@ export default function Desain() {
       </div>
       </ScrollAnimation>
 
+      {/* Balihoww Designs */}
+      <ScrollAnimation delay={0.1}>
+  <section className="relative py-8 md:py-16 px-6 md:px-12 lg:px-24 xl:px-32">
+    <div className="absolute left-6 md:left-12 lg:left-24 xl:left-32 top-4 md:top-8 z-10">
+      <h2 className="text-2xl md:text-3xl lg:text-4xl text-cyan-400 font-bold tracking-wide">BALIHO/BILLBOARD</h2>
+      <motion.div
+        className="absolute left-0 top-full mt-1 md:mt-2 w-24 md:w-32 h-0.5 md:h-1 bg-cyan-400"
+        initial={{ opacity: 0, scaleX: 0 }}
+        animate={{ opacity: 1, scaleX: 1 }}
+        transition={{ duration: 0.8 }}
+      />
+    </div>
+    
+    <div className="absolute right-6 md:right-12 lg:right-24 xl:right-32 top-4 md:top-8 flex items-center">
+      <div className="h-px w-8 md:w-16 ml-4 bg-cyan-400 mr-2 md:mr-4"></div>
+      <span className="text-gray-400 text-sm md:text-base">01</span>
+    </div>
+
+    {/* Baris pertama - 3 gambar 1:1 */}
+    <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 md:gap-6 mt-16 mb-8 md:mb-16">
+      {[bal1, bal2, bal3].map((poster, index) => (
+        <motion.div 
+          key={index}
+          className="relative overflow-hidden rounded-lg shadow-2xl w-full aspect-square"
+          whileHover={{ y: -10 }}
+          transition={{ duration: 0.3, delay: index * 0.1 }}
+        >
+          <img 
+            src={poster} 
+            alt={`Poster ${index + 1}`} 
+            className="w-full h-full object-cover" 
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-end p-4 md:p-6">
+            <h3 className="text-sm md:text-xl font-medium">
+              {index === 0 ? "Advertising Poster" : index === 1 ? "Advertising Poster" : "Advertising Poster"}
+            </h3>
+          </div>
+        </motion.div>
+      ))} 
+    </div>
+
+    {/* Baris kedua - 3 gambar 1:1 */}
+    <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 md:gap-6 mt-16 mb-8 md:mb-16">
+      {[bal4, bal5, bal6].map((poster, index) => (
+        <motion.div 
+          key={index}
+          className="relative overflow-hidden rounded-lg shadow-2xl w-full aspect-square"
+          whileHover={{ y: -10 }}
+          transition={{ duration: 0.3, delay: index * 0.1 }}
+        >
+          <img 
+            src={poster} 
+            alt={`Poster ${index + 4}`} 
+            className="w-full h-full object-cover" 
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-end p-4 md:p-6">
+            <h3 className="text-sm md:text-xl font-medium">
+              Advertising Poster
+            </h3>
+          </div>
+        </motion.div>
+      ))}
+    </div>
+  </section>
+</ScrollAnimation>
+
       {/* Poster Designs */}
       <ScrollAnimation delay={0.1}>
       <section className="relative py-8 md:py-16 px-6 md:px-12 lg:px-24 xl:px-32">
@@ -363,121 +468,232 @@ export default function Desain() {
       </section>
       </ScrollAnimation>
 
-      {/* Freelance Design */}
-      <ScrollAnimation delay={0.3}>
-      <section className="relative py-12 md:py-20 px-6 md:px-12 lg:px-24 xl:px-32">
-        <div className="flex flex-col md:flex-row justify-between items-start mb-8 md:mb-16 gap-6">
-          <div>
-            <h2 className="text-3xl md:text-4xl text-white font-bold tracking-wide mb-2 md:mb-4">
-              FREELANCE <br /> DESIGN
-            </h2>
-            <motion.div
-              className="w-32 md:w-48 h-0.5 md:h-1 bg-cyan-400"
-              initial={{ scaleX: 0 }}
-              animate={{ scaleX: 1 }}
-              transition={{ duration: 0.8 }}
-            />
+      {/* KATALOG Cover */}
+      <ScrollAnimation delay={0.2}>
+      <section className="relative py-12 md:py-20 px-6 md:px-12 lg:px-24 xl:px-32 bg-gray-800/50">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12">
+          <div className="flex items-center justify-center lg:justify-start">
+            <motion.div 
+              className="relative shadow-2xl w-full max-w-md"
+              whileHover={{ scale: 1.02 }}
+              transition={{ duration: 0.3 }}
+            >
+              <img src={katalog} alt="Vogue Cover" className="w-full rounded-lg" />
+              <div className="absolute -bottom-4 -right-4 bg-gray-900 w-12 h-12 rounded-full flex items-center justify-center border-2 border-cyan-400">
+                <span className="text-cyan-400 font-bold text-sm md:text-base">02</span>
+              </div>
+            </motion.div>
           </div>
           
-          <div className="text-left pt-8 md:text-right">
-            <h3 className="text-xl md:text-2xl text-cyan-400 font-medium mb-1 md:mb-2">STICKER PRODUCT</h3>
-            <p className="text-gray-400 text-sm md:text-base max-w-md">
-              Custom sticker designs that enhance brand identity and product appeal.
-            </p>
-          </div>
-        </div>
-        
-        <div className="bg-gray-800/50 p-4 md:p-8 rounded-xl shadow-2xl">
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 lg:gap-8">
-            {[
-              {img: pedes, title: "Product Sticker"},
-              {img: rotimanis2, title: "Food Label"},
-              {img: skjpedes, title: "Brand Sticker"}
-            ].map((item, index) => (
-              <motion.div 
-                key={index}
-                className="relative overflow-hidden rounded-xl"
-                whileHover={{ scale: 1.05 }}
-                transition={{ duration: 0.3, delay: index * 0.1 }}
-              >
-                <img 
-                  src={item.img} 
-                  alt={item.title} 
-                  className="w-full h-48 sm:h-56 md:h-64 object-contain" 
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-end p-4 md:p-6">
-                  <h3 className="text-white font-medium text-sm md:text-base">{item.title}</h3>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-        
-        <div className="absolute right-6 md:right-12 lg:right-24 xl:right-32 top-8 md:top-12 lg:top-20 flex items-center">
-          <span className="text-gray-400 text-sm md:text-base">03</span>
-          <div className="h-px w-8 md:w-16 bg-cyan-400 ml-2 md:ml-4"></div>
-        </div>
-      </section>
-      </ScrollAnimation>
-
-      {/* Social Media */}
-      <ScrollAnimation delay={0.4}>
-      <section className="relative py-12 md:py-20 px-6 md:px-12 lg:px-24 xl:px-32 bg-gray-800/50">
-        <div className="flex justify-end mb-8 md:mb-12">
-          <div className="text-right">
-            <h2 className="text-3xl md:text-4xl text-cyan-400 font-bold tracking-wide mb-1 md:mb-2">
-              SOCIAL <br /> MEDIA
+          <div className="flex flex-col justify-center">
+            <h2 className="text-3xl md:text-4xl text-white font-bold mb-4 md:mb-6 tracking-wide">
+                KATALOG PRODUK
             </h2>
-           
-            <motion.div
-              className="ml-auto w-24 md:w-32 h-0.5 md:h-1 bg-cyan-400"
-              initial={{ scaleX: 0 }}
-              animate={{ scaleX: 1 }}
-              transition={{ duration: 0.8 }}
-            />
-             <p className="text-gray-400 text-sm pt-4 md:text-base max-w-md">
-            Customized social media design           
+            <p className="text-gray-400 mb-6 md:mb-8 text-sm md:text-base max-w-md">
+              Design Katalog Produk 
             </p>
+            
+            <div className="grid grid-cols-2 gap-2">
+              {[kat1,kat2,kat3,kat4].map((img, index) => (
+                <motion.div 
+                  key={index}
+                  whileHover={{ y: -5 }} 
+                  transition={{ duration: 0.2, delay: index * 0.1 }}
+                >
+                  <img 
+                    src={img} 
+                    alt="" 
+                    className="w-full h-32 sm:h-40 md:h-48 rounded-lg object-cover shadow-lg" 
+                  />
+                </motion.div>
+              ))}
+            </div>
           </div>
-        </div>
-        
-       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2 md:gap-3 mb-3 md:mb-4">
-  {[pulstak1, pulstak2, pulstak3, sm2, sm3, sm4].map((img, index) => (
-    <motion.div 
-      key={index}
-      whileHover={{ y: -5 }} 
-      transition={{ duration: 0.2, delay: (index % 3) * 0.1 }}
-      className="w-full aspect-square" // Tambahkan aspect-square di sini
-    >
-      <img 
-        src={img} 
-        alt={`Social Media Post ${index + 1}`} 
-        className="w-full h-full object-cover rounded-lg shadow-lg" 
-      />
-    </motion.div>
-  ))}
-</div>
-        
-        <div className="flex justify-center">
-          <motion.div 
-            whileHover={{ scale: 1.02 }} 
-            transition={{ duration: 0.3 }}
-            className="w-full max-w-2xl"
-          >
-            <img 
-              src={sm5} 
-              alt="Featured Social Media Post" 
-              className="w-full h-48 md:h-64 rounded-lg shadow-lg" 
-            />
-          </motion.div>
         </div>
         
         <div className="absolute left-6 md:left-12 lg:left-24 xl:left-32 top-8 md:top-12 lg:top-20 flex items-center">
           <div className="h-px w-8 md:w-16 bg-cyan-400 mr-2 md:mr-4"></div>
-          <span className="text-gray-400 text-sm md:text-base">04</span>
+          <span className="text-gray-400 text-sm md:text-base">02</span>
         </div>
       </section>
       </ScrollAnimation>
+
+       {/* FLAYER */}
+      <ScrollAnimation delay={0.2}>
+      <section className="relative py-12 md:py-20 px-6 md:px-12 lg:px-24 xl:px-32 bg-gray-800/50">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12">
+          <div className="flex items-center justify-center lg:justify-start">
+            <motion.div 
+              className="relative shadow-2xl w-full max-w-md space-y-4"
+              whileHover={{ scale: 1.02 }}
+              transition={{ duration: 0.3 }}
+            >
+              {/* Gambar 1 */}
+              <div className="relative">
+                <img src={fly1} alt="Vogue Cover 1" className="w-full rounded-lg" />
+              </div>
+              
+              {/* Gambar 2 */}
+              <div className="relative">
+                <img src={fly2} alt="Vogue Cover 2" className="w-full rounded-lg" />
+              </div>
+              
+              <div className="absolute -bottom-4 -right-4 bg-gray-900 w-12 h-12 rounded-full flex items-center justify-center border-2 border-cyan-400">
+                <span className="text-cyan-400 font-bold text-sm md:text-base">02</span>
+              </div>
+            </motion.div>
+          </div>
+          
+          <div className="flex flex-col justify-center">
+            <h2 className="text-3xl md:text-4xl text-white font-bold mb-4 md:mb-6 tracking-wide">
+              FLYER
+            </h2>
+            <p className="text-gray-400 mb-6 md:mb-8 text-sm md:text-base max-w-md">
+              Flyer design 6 sisi lipat
+            </p>
+            
+            <div className="grid grid-cols-2 gap-2">
+              {[mcf1,mcf2, mcf3, mcf4, mcf5].map((img, index) => (
+                <motion.div 
+                  key={index}
+                  whileHover={{ y: -5 }} 
+                  transition={{ duration: 0.2, delay: index * 0.1 }}
+                >
+                  <img 
+                    src={img} 
+                    alt="" 
+                    className="w-full h-32 sm:h-40 md:h-48 rounded-lg object-cover shadow-lg" 
+                  />
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </div>
+        
+        <div className="absolute left-6 md:left-12 lg:left-24 xl:left-32 top-8 md:top-12 lg:top-20 flex items-center">
+          <div className="h-px w-8 md:w-16 bg-cyan-400 mr-2 md:mr-4"></div>
+          <span className="text-gray-400 text-sm md:text-base">02</span>
+        </div>
+      </section>
+      </ScrollAnimation>
+
+       {/* PAMFLET */}
+      <ScrollAnimation delay={0.2}>
+      <section className="relative py-12 md:py-20 px-6 md:px-12 lg:px-24 xl:px-32 bg-gray-800/50">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12">
+          <div className="flex items-center justify-center lg:justify-start">
+            <motion.div 
+              className="relative shadow-2xl w-full max-w-md space-y-4"
+              whileHover={{ scale: 1.02 }}
+              transition={{ duration: 0.3 }}
+            >
+              {/* Gambar 1 */}
+              <div className="relative">
+                <img src={pmflt1} alt="Vogue Cover 1" className="w-full rounded-lg" />
+              </div>
+              <div className="absolute -bottom-4 -right-4 bg-gray-900 w-12 h-12 rounded-full flex items-center justify-center border-2 border-cyan-400">
+                <span className="text-cyan-400 font-bold text-sm md:text-base">02</span>
+              </div>
+            </motion.div>
+          </div>
+          
+          <div className="flex flex-col justify-center">
+            <h2 className="text-3xl md:text-4xl text-white font-bold mb-4 md:mb-6 tracking-wide">
+              PAMFLET
+            </h2>
+            <p className="text-gray-400 mb-6 md:mb-8 text-sm md:text-base max-w-md">
+              Pamflet slebaran satu sisi
+            </p>
+            
+            <div className="grid grid-cols-2 gap-2">
+              {[mcpf1,mcpf2,mcpf3].map((img, index) => (
+                <motion.div 
+                  key={index}
+                  whileHover={{ y: -5 }} 
+                  transition={{ duration: 0.2, delay: index * 0.1 }}
+                >
+                  <img 
+                    src={img} 
+                    alt="" 
+                    className="w-full h-32 sm:h-40 md:h-48 rounded-lg object-cover shadow-lg" 
+                  />
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </div>
+        
+        <div className="absolute left-6 md:left-12 lg:left-24 xl:left-32 top-8 md:top-12 lg:top-20 flex items-center">
+          <div className="h-px w-8 md:w-16 bg-cyan-400 mr-2 md:mr-4"></div>
+          <span className="text-gray-400 text-sm md:text-base">02</span>
+        </div>
+      </section>
+      </ScrollAnimation>
+
+
+      {/* Social Media */}
+<ScrollAnimation delay={0.4}>
+<section className="relative py-12 md:py-20 px-6 md:px-12 lg:px-24 xl:px-32 bg-gray-800/50">
+  <div className="flex justify-end mb-8 md:mb-12">
+    <div className="text-right">
+      <h2 className="text-3xl md:text-4xl text-cyan-400 font-bold tracking-wide mb-1 md:mb-2">
+        SOCIAL <br /> MEDIA
+      </h2>
+     
+      <motion.div
+        className="ml-auto w-24 md:w-32 h-0.5 md:h-1 bg-cyan-400"
+        initial={{ scaleX: 0 }}
+        animate={{ scaleX: 1 }}
+        transition={{ duration: 0.8 }}
+      />
+       <p className="text-gray-400 text-sm pt-4 md:text-base max-w-md">
+      Customized social media design dan Redesign sosial media         
+      </p>
+    </div>
+  </div>
+  
+  {/* Definisikan semua gambar dalam satu array */}
+  {(() => {
+    const allImages = [
+      pulstak1, pulstak2, pulstak3, 
+      sm2, sm3, sm4,
+      real1, real4, real2, real3, real5, real9, real7, real6, real8,
+      indo, indo2, indo3, indo4, 
+      takut, takut2  // Gambar baru yang ditambahkan
+    ];
+    
+    const realImages = [real1, real4, real2, real3, real5, real9, real7, real6, real8, indo, indo2, indo3, indo4, takut, takut2];
+    
+    return (
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2 md:gap-3 mb-3 md:mb-4">
+        {allImages.map((img, index) => {
+          const isRealImage = realImages.includes(img);
+          
+          return (
+            <motion.div 
+              key={index}
+              whileHover={{ y: -5 }} 
+              transition={{ duration: 0.2, delay: (index % 3) * 0.1 }}
+              className={`w-full ${isRealImage ? 'aspect-[3/4]' : 'aspect-square'}`}
+            >
+              <img 
+                src={img} 
+                alt={`Social Media Post ${index + 1}`} 
+                className="w-full h-full object-cover rounded-lg shadow-lg" 
+              />
+            </motion.div>
+          );
+        })}
+      </div>
+    );
+  })()}
+  
+  <div className="absolute left-6 md:left-12 lg:left-24 xl:left-32 top-8 md:top-12 lg:top-20 flex items-center">
+    <div className="h-px w-8 md:w-16 bg-cyan-400 mr-2 md:mr-4"></div>
+    <span className="text-gray-400 text-sm md:text-base">04</span>
+  </div>
+</section>
+</ScrollAnimation>
 
       {/* Logo Design */}
       <ScrollAnimation delay={0.5}>
@@ -604,6 +820,63 @@ export default function Desain() {
       </section>
       </ScrollAnimation>
 
+       {/* Freelance Design */}
+      <ScrollAnimation delay={0.3}>
+      <section className="relative py-12 md:py-20 px-6 md:px-12 lg:px-24 xl:px-32">
+        <div className="flex flex-col md:flex-row justify-between items-start mb-8 md:mb-16 gap-6">
+          <div>
+            <h2 className="text-3xl md:text-4xl text-white font-bold tracking-wide mb-2 md:mb-4">
+              STICKER <br /> PRODUCT
+            </h2>
+            <motion.div
+              className="w-32 md:w-48 h-0.5 md:h-1 bg-cyan-400"
+              initial={{ scaleX: 0 }}
+              animate={{ scaleX: 1 }}
+              transition={{ duration: 0.8 }}
+            />
+          </div>
+          
+          <div className="text-left pt-8 md:text-right">
+            <h3 className="text-xl md:text-2xl text-cyan-400 font-medium mb-1 md:mb-2">STICKER PRODUCT</h3>
+            <p className="text-gray-400 text-sm md:text-base max-w-md">
+              Custom sticker designs that enhance brand identity and product appeal.
+            </p>
+          </div>
+        </div>
+        
+        <div className="bg-gray-800/50 p-4 md:p-8 rounded-xl shadow-2xl">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 lg:gap-8">
+            {[
+              {img: pedes, title: "Product Sticker"},
+              {img: rotimanis2, title: "Food Label"},
+              {img: skjpedes, title: "Brand Sticker"}
+            ].map((item, index) => (
+              <motion.div 
+                key={index}
+                className="relative overflow-hidden rounded-xl"
+                whileHover={{ scale: 1.05 }}
+                transition={{ duration: 0.3, delay: index * 0.1 }}
+              >
+                <img 
+                  src={item.img} 
+                  alt={item.title} 
+                  className="w-full h-48 sm:h-56 md:h-64 object-contain" 
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-end p-4 md:p-6">
+                  <h3 className="text-white font-medium text-sm md:text-base">{item.title}</h3>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+        
+        <div className="absolute right-6 md:right-12 lg:right-24 xl:right-32 top-8 md:top-12 lg:top-20 flex items-center">
+          <span className="text-gray-400 text-sm md:text-base">03</span>
+          <div className="h-px w-8 md:w-16 bg-cyan-400 ml-2 md:ml-4"></div>
+        </div>
+      </section>
+      </ScrollAnimation>
+
       {/* Another Design */}
       <ScrollAnimation delay={0.6}>
       <section className="relative py-12 md:py-20 px-6 md:px-12 lg:px-24 xl:px-32 bg-gray-800/50">
@@ -661,20 +934,33 @@ export default function Desain() {
       </section>
       </ScrollAnimation>
 
-     
+{/* Tombol navigasi home dan scroll-to-top */}
+{isVisible && (
+  <div className="fixed bottom-8 right-8 flex flex-col gap-3 z-50">
+    {/* Tombol Home sederhana */}
+    <motion.button 
+      onClick={() => window.location.href = '/'}
+      className="p-4 bg-gradient-to-r from-cyan-400 to-blue-500 text-white rounded-full shadow-lg"
+      whileHover={{ scale: 1.1 }}
+      whileTap={{ scale: 0.9 }}
+      title="Go to Home"
+    >
+      <FaHome className="text-xl" />
+    </motion.button>
 
-
-      {/* Tombol scroll-to-top */}
-            {isVisible && (
-              <motion.button 
-                onClick={scrollToTop}
-                className="fixed bottom-8 right-8 p-4 bg-gradient-to-r from-yellow-400 to-blue-300 text-blue-950 rounded-full shadow-lg z-50"
-                whileHover={{ scale: 1.1 }}
-                whileTap={{ scale: 0.9 }}
-              >
-                <FaArrowUp className="text-xl" />
-              </motion.button>
-            )}
+    {/* Tombol Scroll to Top */}
+    <motion.button 
+      onClick={scrollToTop}
+      className="p-4 bg-gradient-to-r from-yellow-400 to-blue-300 text-blue-950 rounded-full shadow-lg"
+      whileHover={{ scale: 1.1 }}
+      whileTap={{ scale: 0.9 }}
+      title="Scroll to Top"
+    >
+      <FaArrowUp className="text-xl" />
+    </motion.button>
+  </div>
+)}
+            
     </div>
   );
 }

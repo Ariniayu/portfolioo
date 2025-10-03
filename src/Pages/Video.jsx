@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import VideoReel from '../components/VideoReel';
+import { FaHome } from 'react-icons/fa';
 // import rekapkkl from '../assets/videos/rekap kkl 2025.mp4'
 // import bumper from '../assets/videos/bumper (2).mp4'
 // import afterevent from '../assets/videos/After event.mp4';
@@ -46,6 +47,7 @@ import mm2 from '../assets/photography/mm2.png'
 import mm3 from '../assets/photography/mm3.png'
 import shutterstock from '../assets/shutterstock.png'
 import ig from '../assets/insta.svg'
+import mcbook from '../assets/dg/vr.jpg'
 import { FiVideo, FiCamera } from 'react-icons/fi';
 import ParticleBg from '../components/ParticleBg';
 import { FiArrowRight } from 'react-icons/fi';
@@ -81,12 +83,13 @@ const VideoPortfolioPage = () => {
   };
   // Data video portfolio
   const videoProjects = [
+    
     {
       id: 1,
-    title: "Video Luaran Pengabdian Dosen pada Bank Sampah Mitra Insani",
-    category: "Tools: Capcut, Canva dan AI Voice Over",
-    videoUrl: "https://www.youtube.com/embed/VghbO97brUU",
-    thumbnail: "https://img.youtube.com/vi/VghbO97brUU/hqdefault.jpg"
+      title: "Video Verde Residence",
+      category: "Tools: Capcut , Voiceover AI, Assets Video form istock",
+      videoUrl: "https://youtu.be/KnltCimPXVw",
+      thumbnail: mcbook
     },
     {
       id: 2,
@@ -131,11 +134,12 @@ const VideoPortfolioPage = () => {
       thumbnail: sinem
     },
     {
+      
       id: 6,
-      title: "Vlog Pribadi",
-      category: "Tools: Adobe Premiere",
-      videoUrl: "https://youtu.be/jrqcDkwoRLU?si=7swdn7__OuSAo1IP",
-      thumbnail: vlogweb
+    title: "Video Luaran Pengabdian Dosen pada Bank Sampah Mitra Insani",
+    category: "Tools: Capcut, Canva dan AI Voice Over",
+    videoUrl: "https://www.youtube.com/embed/VghbO97brUU",
+    thumbnail: "https://img.youtube.com/vi/VghbO97brUU/hqdefault.jpg"
     },
     {
       id: 7,
@@ -143,6 +147,14 @@ const VideoPortfolioPage = () => {
       category: "Tools: Canva, Capcut , Voiceover AI",
       videoUrl: "https://youtu.be/5_edwcJBGbU?si=dq2BAXY2NrI-KgxV",
       thumbnail: adamokap
+    },
+    
+    {
+      id: 8,
+      title: "Vlog Pribadi",
+      category: "Tools: Adobe Premiere",
+      videoUrl: "https://youtu.be/jrqcDkwoRLU?si=7swdn7__OuSAo1IP",
+      thumbnail: vlogweb
     },
     
   
@@ -768,17 +780,32 @@ const VideoPortfolioPage = () => {
       </motion.div>
 
           
-{/* Tombol scroll-to-top */}
-      {isVisible && (
-        <motion.button 
-          onClick={scrollToTop}
-          className="fixed bottom-8 right-8 p-4 bg-gradient-to-r from-yellow-400 to-blue-300 text-blue-950 rounded-full shadow-lg z-50"
-          whileHover={{ scale: 1.1 }}
-          whileTap={{ scale: 0.9 }}
-        >
-          <FaArrowUp className="text-xl" />
-        </motion.button>
-      )}
+{/* Tombol navigasi home dan scroll-to-top */}
+{isVisible && (
+  <div className="fixed bottom-8 right-8 flex flex-col gap-3 z-50">
+    {/* Tombol Home sederhana */}
+    <motion.button 
+      onClick={() => window.location.href = '/'}
+      className="p-4 bg-gradient-to-r from-cyan-400 to-blue-500 text-white rounded-full shadow-lg"
+      whileHover={{ scale: 1.1 }}
+      whileTap={{ scale: 0.9 }}
+      title="Go to Home"
+    >
+      <FaHome className="text-xl" />
+    </motion.button>
+
+    {/* Tombol Scroll to Top */}
+    <motion.button 
+      onClick={scrollToTop}
+      className="p-4 bg-gradient-to-r from-yellow-400 to-blue-300 text-blue-950 rounded-full shadow-lg"
+      whileHover={{ scale: 1.1 }}
+      whileTap={{ scale: 0.9 }}
+      title="Scroll to Top"
+    >
+      <FaArrowUp className="text-xl" />
+    </motion.button>
+  </div>
+)}
     </div>
   );
 };
